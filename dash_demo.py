@@ -7,7 +7,7 @@ import plotly.express as px
 
 app = Dash(__name__)
 
-data = pd.read_csv(r'E:\Dataset\iris.csv')
+data = pd.read_csv(r'path\to\iris.csv')    # give the directory path of iris dataset
 lis = list(data.columns)
 lis.remove('species')
 
@@ -45,7 +45,7 @@ app.layout = html.Div([
 )
 def update(val1,val2):
 
-    df = pd.read_csv(r'E:\Dataset\iris.csv')
+    df = pd.read_csv(r'path\to\iris.csv')    # give the directory path of iris dataset
 
     fig = px.scatter(df,x=val1,y=val2,color='species')
 
